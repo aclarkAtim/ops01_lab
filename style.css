@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+body,
+html {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.navbar {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.title-text {
+  position: relative; /* Enable relative positioning */
+  top: 60px; /* Adjust as needed to position the text below the rocket */
+  left: 0px; /* Adjust as needed to position the text horizontally */
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 80px;
+}
+
+.land-text {
+  color: white;
+  z-index: 3;
+}
+
+.nav-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background-color: purple;
+  transition: width 0.25s ease-out, left 0.25s ease-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.parallax {
+  background-image: url("https://via.placeholder.com/1500x1000");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  position: relative; /* Ensure z-index works */
+  z-index: 4; /* Make sure parallax section is above text */
+  /* Allow only vertical scrolling within the parallax section */
+}
+.card {
+  position: relative;
+  z-index: 3; /* Ensure cards are above parallax background */
+}
+
+#canvas3d {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  /* This ensures the canvas doesn't interfere with scrolling */
+}
+
+.planet {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.planet img {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-out;
+}
+
+.planet1 {
+  background-color: #1a1a1a;
+}
+.planet2 {
+  background-color: #333333;
+}
+.planet3 {
+  background-color: #4d4d4d;
+}
+/* Add more planet styles as needed */
